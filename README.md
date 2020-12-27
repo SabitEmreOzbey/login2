@@ -1,7 +1,7 @@
 # login2
 Hey this is basic object-oriented programming CRUD.  
 PHP Version is 7.4.   
-Database is inside DBfile.
+Database is inside DBfile.  
 Admin Info:  
 Username: mike@example.com  
 Password: ninja12qw!@QW  
