@@ -2,6 +2,7 @@
 Hey this is basic object-oriented programming CRUD.  
 PHP Version is 7.4.   
 Database is inside DBfile.  
+**Info: User logins(Admin&Customer) are on the same page.**
 Admin Info:  
 Username: mike@example.com  
 Password: ninja12qw!@QW  
