@@ -61,7 +61,7 @@ if ($_POST) {
             // send confimation email
             $send_to_email = $_POST['email'];
             $body = "Hi {$send_to_email}.<br /><br />";
-            $body .= "Please click the following link to verify your email and login: {$home_url}verify/?access_code={$access_code}";
+            $body .= "Please click the following link to verify your email and login: {$home_url}verify.php?access_code={$access_code}";
             $subject = "Verification Email";
 
             if ($utils->sendEmailViaPhpMail($send_to_email, $subject, $body)) {

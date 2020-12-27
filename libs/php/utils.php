@@ -1,4 +1,9 @@
 <?php
+
+require 'vendor/autoload.php';
+use Mailgun\Mailgun;
+
+
 class Utils{
     function getToken($length=32){
         $token = "";
@@ -25,19 +30,24 @@ class Utils{
         return $min + $rnd;
     }
     // send email using built in php mail function
-public function sendEmailViaPhpMail($send_to_email, $subject, $body){
- 
-    $from_name="Emre Özbey";
-    $from_email="edtremre@gmail.com";
- 
-    $headers  = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-    $headers .= "From: {$from_name} <{$from_email}> \n";
- 
-    if(mail($send_to_email, $subject, $body, $headers)){
+// send email using built in php mail function
+public function sendEmailViaPhpMail($send_to_email, $subject, $message){
+    # First, instantiate the SDK with your API credentials
+    $mg = Mailgun::create('key-example');
+
+    # Now, compose and send your message.
+    # $mg->messages()->send($domain, $params);
+    $mg->messages()->send('erpb2b.com', [
+        'from'    => 'info@erpb2b.com',
+        'to'      => 	$send_to_email,
+        'subject' => 	$subject,
+        'text'    => $message
+    ]);
+
+    if($mg){
         return true;
+    }else{
+        return false;
     }
- 
-    return false;
-}
+    }
 }
