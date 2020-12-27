@@ -37,8 +37,8 @@ public function sendEmailViaPhpMail($send_to_email, $subject, $message){
 
     # Now, compose and send your message.
     # $mg->messages()->send($domain, $params);
-    $mg->messages()->send('erpb2b.com', [
-        'from'    => 'info@erpb2b.com',
+    $mg->messages()->send('example.com', [
+        'from'    => 'info@example.com',
         'to'      => 	$send_to_email,
         'subject' => 	$subject,
         'text'    => $message
