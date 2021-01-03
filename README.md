@@ -1,5 +1,5 @@
-# login2
-Hey this is basic object-oriented programming CRUD.  
+# LoginScript
+Hey this is basic object-oriented programming Login script.  
 PHP Version is 7.4.   
 Database is inside DBfile.  
 **Info: User logins(Admin&Customer) are on the same page.**
